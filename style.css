@@ -35,17 +35,21 @@ body {
   z-index: 1;
 }
 
-/* Overlay image */
-.overlay-img {
-  width: 40%;
-  /* height: 50%; */
+.overlay-container {
+  width: clamp(350px, 80%, 750px);
+  padding-right: clamp(20px, 15%, 80px);
   object-fit: contain;
   position: absolute;
-  top: 25%; /* center vertically */
-  left: 45%; /* center horizontally */
-  transform: translate(-50%, -50%); /* shift to actual center */
+  top: 25%;
+  left: 45%;
+  transform: translate(-50%, -50%);
   z-index: 2;
   pointer-events: none;
+}
+
+/* Overlay image */
+.overlay-img {
+  width: 100%;
 }
 
 .ellipse {
@@ -77,10 +81,10 @@ body {
   padding: 20px;
   width: 370px;
   height: 176px;
-  background: rgba(255, 255, 255, 0.3); /* more noticeable blur */
+  background: rgba(255, 255, 255, 0.3);
   border: 1px solid #ffffff;
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px); /* Safari support */
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 10px;
   z-index: 50;
   display: flex;
